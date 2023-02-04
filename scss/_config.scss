@@ -1,5 +1,54 @@
+@font-face {
+    font-family: "Shrikhand";
+    src: url("https://fonts.googleapis.com/css?family=Shrikhand");
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("https://fonts.googleapis.com/css?family=Roboto");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $font-title: "Shrikhand", serif;
 $font-text: "Roboto", serif;
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 900
+);
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+$font-size: (
+    "regular": 10px,
+    "medium": 18px,
+    "bold": 30px
+);
+@function fontsize($size-name) {
+    @return map-get($font-size, $size-name);
+}
+@mixin flexcenterwrap{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+@mixin none {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+@mixin textcenter {
+    margin: auto;
+    text-align: center;
+}
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
