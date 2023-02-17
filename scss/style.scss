@@ -1,8 +1,80 @@
-@import 'config'
+@import "./config";
 
-*,html, body {
-    margin: 0;
-    padding: 0;
-    border:0;
-    box-sizing: content-box;
+// Media query Mobile devices
+@media (width <=480px) {
+.font_logo {
+    font-family: $font-text;
+    font-weight: weight(bold);
+    font-size: fontsize(bold);
 }
+.font_text {
+    font-family: $font-text;
+    font-weight: weight(regular);
+    font-size: fontsize(medium);
+}
+.font_title {
+    font-family: $font-text;
+    font-weight: weight(bold);
+    font-size: fontsize(bold);
+}
+.btn_gradient {
+        background: linear-gradient($secondary-color, $primary-color); 
+        transition: 0.5s;
+        background-size: 200% auto;
+}
+.btn_style{
+    padding: 20px;
+    border: 0px;
+    border-radius: 40px;
+    color: white;            
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        &:hover {
+            background-position: right center; 
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+}
+    // Header
+    .header-logo_href {
+        @include flexcenterwrap;
+         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            .logo {
+                margin: 0px auto;
+                padding: 20px 0px;
+                width: 50%;
+            }
+    }
+    .header-location {
+        @include flexcenterwrap;
+        margin: 0px auto;
+        padding: 20px 0px;
+        background-color: rgba(0, 0, 0, 0.07);
+            .icon {
+                padding-right: 15px;
+            }
+            .header-location_span{
+                font-family: $font-text;
+                font-size: fontsize(menium);                
+            }
+    }
+    .header-text {
+        margin: 20px;
+        
+            .header-text_ul {
+                @include flexcenterwrap;
+                @include reset-list;
+                    > * {
+                        padding: 20px;
+                        @include textcenter;
+                    }
+        }
+    }
+    .header-btn_explore {
+                
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {}
+
+@media (width >= 769px) {}

@@ -1,6 +1,93 @@
-*, html, body {
+@font-face {
+  font-family: "Shrikhand";
+  src: url("https://fonts.googleapis.com/css?family=Shrikhand");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("https://fonts.googleapis.com/css?family=Roboto");
+}
+* {
   margin: 0;
   padding: 0;
-  border: 0;
   box-sizing: content-box;
+}
+
+@media (width <= 480px) {
+  .font_logo {
+    font-family: "Roboto", serif;
+    font-weight: 900;
+    font-size: 30px;
+  }
+  .font_text {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-size: 18px;
+  }
+  .font_title {
+    font-family: "Roboto", serif;
+    font-weight: 900;
+    font-size: 30px;
+  }
+  .btn_gradient {
+    background: linear-gradient(#FF79DA, #9356DC);
+    transition: 0.5s;
+    background-size: 200% auto;
+  }
+  .btn_style {
+    padding: 20px;
+    border: 0px;
+    border-radius: 40px;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+  .btn_style:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .header-logo_href {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+  .header-logo_href .logo {
+    margin: 0px auto;
+    padding: 20px 0px;
+    width: 50%;
+  }
+  .header-location {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 0px auto;
+    padding: 20px 0px;
+    background-color: rgba(0, 0, 0, 0.07);
+  }
+  .header-location .icon {
+    padding-right: 15px;
+  }
+  .header-location .header-location_span {
+    font-family: "Roboto", serif;
+  }
+  .header-text {
+    margin: 20px;
+  }
+  .header-text .header-text_ul {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .header-text .header-text_ul > * {
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */
