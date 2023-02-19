@@ -12,8 +12,10 @@
     box-sizing: content-box;
 }
 $primary-color: #9356DC;
+$primary-color_opacity: #e9ddf8;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
+$background-color_grey: #f7f7f7;
 $font-title: "Shrikhand", serif;
 $font-text: "Roboto", serif;
 $font-weights: (
@@ -27,26 +29,37 @@ $font-weights: (
 $font-size: (
     "regular": 10px,
     "medium": 18px,
+    "mid": 22px,
     "bold": 30px
 );
 @function fontsize($size-name) {
     @return map-get($font-size, $size-name);
 }
+// Flex center wrapped
 @mixin flexcenterwrap{
     display:flex;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
 }
+// Flex center
+@mixin flexcenter{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+// No space around
 @mixin none {
     margin: 0;
     padding: 0;
     border: 0;
 }
+// Text centered
 @mixin textcenter {
     margin: auto;
     text-align: center;
 }
+// Li display reset
 @mixin reset-list {
     margin: 0;
     padding: 0;

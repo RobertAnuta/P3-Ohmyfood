@@ -1,7 +1,7 @@
 @import "./config";
 
 // Media query Mobile devices
-@media (width <=480px) {
+
 .font_logo {
     font-family: $font-text;
     font-weight: weight(bold);
@@ -38,7 +38,7 @@
     // Header
     .header-logo_href {
         @include flexcenterwrap;
-         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
             .logo {
                 margin: 0px auto;
                 padding: 20px 0px;
@@ -49,7 +49,7 @@
         @include flexcenterwrap;
         margin: 0px auto;
         padding: 20px 0px;
-        background-color: rgba(0, 0, 0, 0.07);
+        background-color: #e7e7e7;
             .icon {
                 padding-right: 15px;
             }
@@ -59,7 +59,7 @@
             }
     }
     .header-text {
-        margin: 20px;
+        background-color: $background-color_grey;
         
             .header-text_ul {
                 @include flexcenterwrap;
@@ -71,9 +71,111 @@
         }
     }
     .header-btn_explore {
-                
+
     }
-}
+    .nav-menu {
+        @include flexcenterwrap;
+        flex-direction: column;
+        @include textcenter;
+    }
+    .nav-menu {
+        padding: 30px 0px 30px 0px;
+           > .nav-menu_title {
+            display: flex;
+            justify-content: flex-start;
+            padding: 30px 0px;
+            font-family: $font-text;
+            font-weight: weight(bold);
+            font-size: fontsize(bold);
+           }
+    }
+    .nav-menu_element {
+        @include flexcenterwrap;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: $background-color_grey;
+        box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.09);
+        padding: 30px;
+        margin: 10px;
+        border-radius: 20px;
+        width: 70%;
+        height: 20px;
+            .menu-element_no {
+                @include flexcenterwrap;
+                margin-left: -50px;
+                padding: 10px;
+                border-radius: 20px;
+                width: 10px;
+                height: 10px;
+                background-color: $primary-color;
+                color: #fff;
+                font-size: 15px;
+                font-family: $font-text;
+                font-weight: weight(bold);
+            }
+            .header-icons {
+                @include flexcenterwrap;
+                padding: 20px;
+                width: 20px;
+                font-size: 20px;
+                color: #A9A9A9;
+            }
+            .menu-element_text {
+                @include flexcenterwrap;
+                font-family: $font-text;
+                font-size: fontsize(medium);
+                font-weight: weight(bold);
+            }
+    }
+    .nav-menu_element:hover {
+        cursor: pointer;
+        background-color: $primary-color_opacity;
+            .fa-solid {
+            color: $primary-color;
+            }
+    }
+    .section-restaurant {
+        @include flexcenterwrap;
+        flex-direction: column;
+        background-color: $background-color_grey;
+            .restaurant_text {
+
+            }
+    }
+
+    .footer-ul{
+        @include flexcenterwrap;
+        @include reset-list;
+        flex-direction: column;
+        background-color: #282828;
+        color:#fff;
+            .footer-logo_href {
+                .footer-logo {
+                    display: flex;
+                    justify-content: flex-start;
+                    padding: 20px 0px;
+                    margin: 10px 0px;
+                    width: 35%;
+                    filter: invert(1);
+                }
+            }
+            .footer-element {
+                padding: 5px 0px;
+                font-size: fontsize(medium);
+                font-weight: weight(bold);
+            }
+            .footer-element:hover {
+                cursor: pointer;
+                text-decoration: underline;
+                }
+
+            .footer-icons {
+                width: 25px;
+                font-weight: 20px;
+                padding-right: 5px;
+            }
+    }
+@media (width <=480px) {}
 
 @media (min-width: 481px) and (max-width: 768px) {}
 
