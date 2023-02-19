@@ -48,6 +48,11 @@ $font-size: (
     justify-content: center;
     align-content: center;
 }
+// Flex wrap
+@mixin flexwrap{
+    display:flex;
+    flex-wrap: wrap;
+}
 // No space around
 @mixin none {
     margin: 0;

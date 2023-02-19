@@ -35,152 +35,237 @@
             cursor: pointer;
         }
 }
-    // Header
-    .header-logo_href {
-        @include flexcenterwrap;
-         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
-            .logo {
-                margin: 0px auto;
-                padding: 20px 0px;
-                width: 50%;
-            }
-    }
-    .header-location {
-        @include flexcenterwrap;
-        margin: 0px auto;
-        padding: 20px 0px;
-        background-color: #e7e7e7;
-            .icon {
-                padding-right: 15px;
-            }
-            .header-location_span{
-                font-family: $font-text;
-                font-size: fontsize(menium);                
-            }
-    }
-    .header-text {
-        background-color: $background-color_grey;
-        
-            .header-text_ul {
-                @include flexcenterwrap;
-                @include reset-list;
-                    > * {
-                        padding: 20px;
-                        @include textcenter;
-                    }
+// Header
+.header-logo_href {
+    @include flexcenterwrap;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+        .logo {
+            margin: 0px auto;
+            padding: 20px 0px;
+            width: 50%;
         }
+}
+.header-location {
+    @include flexcenterwrap;
+    margin: 0px auto;
+    padding: 20px 0px;
+    background-color: #e7e7e7;
+        .icon {
+            padding-right: 15px;
+        }
+        .header-location_span{
+            font-family: $font-text;
+            font-size: fontsize(menium);                
+        }
+}
+.header-text {
+    background-color: $background-color_grey;
+        .header-text_ul {
+            @include flexcenterwrap;
+            @include reset-list;
+                > * {
+                    padding: 20px;
+                    @include textcenter;
+                }
     }
-    .header-btn_explore {
+}
+.header-btn_explore {
 
-    }
-    .nav-menu {
-        @include flexcenterwrap;
-        flex-direction: column;
-        @include textcenter;
-    }
-    .nav-menu {
-        padding: 30px 0px 30px 0px;
-           > .nav-menu_title {
+}
+.nav-menu {
+    @include flexcenterwrap;
+    flex-direction: column;
+    @include textcenter;
+    padding: 30px 0px 30px 0px;
+    .nav-menu_title {
+        display: flex;
+        justify-content: flex-start;
+        padding: 30px 0px;
+        font-family: $font-text;
+        font-weight: weight(bold);
+        font-size: fontsize(bold);
+        }
+}
+.nav-menu_element {
+    @include flexcenterwrap;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: $background-color_grey;
+    box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.09);
+    padding: 30px;
+    margin: 10px;
+    border-radius: 20px;
+    width: 70%;
+    height: 20px;
+        .menu-element_no {
+            @include flexcenterwrap;
+            margin-left: -50px;
+            padding: 10px;
+            border-radius: 20px;
+            width: 10px;
+            height: 10px;
+            background-color: $primary-color;
+            color: #fff;
+            font-size: 15px;
+            font-family: $font-text;
+            font-weight: weight(bold);
+        }
+        .header-icons {
+            @include flexcenterwrap;
+            padding: 20px;
+            width: 20px;
+            font-size: 20px;
+            color: #A9A9A9;
+        }
+        .menu-element_text {
+            @include flexcenterwrap;
+            font-family: $font-text;
+            font-size: fontsize(medium);
+            font-weight: weight(bold);
+        }
+}
+.nav-menu_element:hover {
+    cursor: pointer;
+    background-color: $primary-color_opacity;
+        .header-icons {
+        color: $primary-color;
+        }
+}
+.section-restaurant {
+    @include flexcenterwrap;
+    flex-direction: column;
+    background-color: $background-color_grey;
+                padding-bottom: 50px;
+
+        .restaurant_text {
             display: flex;
             justify-content: flex-start;
-            padding: 30px 0px;
+            padding-top: 50px;
+            padding-bottom: 10px;
             font-family: $font-text;
             font-weight: weight(bold);
             font-size: fontsize(bold);
-           }
-    }
-    .nav-menu_element {
-        @include flexcenterwrap;
-        align-items: center;
-        justify-content: flex-start;
-        background-color: $background-color_grey;
-        box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.09);
-        padding: 30px;
-        margin: 10px;
-        border-radius: 20px;
-        width: 70%;
-        height: 20px;
-            .menu-element_no {
-                @include flexcenterwrap;
-                margin-left: -50px;
-                padding: 10px;
-                border-radius: 20px;
-                width: 10px;
-                height: 10px;
-                background-color: $primary-color;
-                color: #fff;
-                font-size: 15px;
-                font-family: $font-text;
-                font-weight: weight(bold);
-            }
-            .header-icons {
-                @include flexcenterwrap;
-                padding: 20px;
-                width: 20px;
-                font-size: 20px;
-                color: #A9A9A9;
-            }
-            .menu-element_text {
-                @include flexcenterwrap;
-                font-family: $font-text;
+            width: 90%;
+        }
+        .restaurant-card {
+            @include flexwrap;
+            flex-direction: column;
+            width: 90%;
+            margin: 10px 0px; ;
+            border-radius: 20px;
+            box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.09);
+        }
+        .restaurant-image_link {
+            @include flexcenterwrap;
+        }
+        img {
+            border-radius: 20px 20px 0px 0px;
+            object-fit: cover;
+            width: 100%;
+            height: 200px;
+        }
+        .btn-new_green{
+            position: absolute;
+            right: -10px;
+            transform: translate(-50%, -50%);
+            background-color: $tertiary-color;
+            color: darkgreen;
+            font-size: 16px;
+            padding: 8px 30px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn-new_position-1 {
+            top: 990px;
+        }
+        .btn-new_position-2 {
+            top: 1280px;
+        }
+}
+
+.restaurant-card_bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 10px;
+    height: 50px;
+        .restaurant-card_text {
+            align-content: space-between;
+            .restaurant-card_name {
                 font-size: fontsize(medium);
                 font-weight: weight(bold);
-            }
-    }
-    .nav-menu_element:hover {
+                }
+        }
+    i {
         cursor: pointer;
-        background-color: $primary-color_opacity;
-            .fa-solid {
-            color: $primary-color;
-            }
+        font-size: 20px;
     }
-    .section-restaurant {
-        @include flexcenterwrap;
-        flex-direction: column;
-        background-color: $background-color_grey;
-            .restaurant_text {
-
+    .icon_hide {
+        display: none;  
+        color: transparent;
+        background-clip: text;
+        background-image: linear-gradient($secondary-color, $primary-color); 
+        transition: 0.5s;
+        }
+       .icon_heart:hover {
+            .icon_show {
+                display: none; 
             }
-    }
-
-    .footer-ul{
-        @include reset-list;
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        background-color: #282828;
-        color:#fff;
-            .footer-logo_href {
-                .footer-logo {
-                    display: flex;
-                    justify-content: flex-start;
-                    padding: 20px 0px;
-                    margin: 10px 0px;
-                    width: 35%;
-                    max-width: 230px;
-                    filter: invert(1);
-                }
+            .icon_hide {
+                display: block; 
             }
-            .footer-element {
-                padding: 5px 0px;
-                font-size: fontsize(medium);
-                font-weight: weight(bold);
-            }
-            .footer-element:hover {
-                cursor: pointer;
-                text-decoration: underline;
-                }
-
-            .footer-icons {
-                width: 25px;
-                font-weight: 20px;
-                padding-right: 5px;
-            }
-    }
-@media (width <=480px) {
-    .min-width_400 {
-        min-width: 400px;
         
+        }
+
+
+}
+   
+footer {
+    background-color: #282828;
+}
+.footer-logo_href {
+    @include flexcenterwrap;
+    justify-content: flex-start;
+    margin: auto;
+     width: 90%;
+            .footer-logo {
+                padding: 20px 0px;
+                margin: 10px 0px;
+                width: 35%;
+                max-width: 230px;
+                filter: invert(1);
+            }
+}
+
+.footer-ul {
+    @include reset-list;
+    @include flexcenterwrap;
+    flex-direction: column;
+    color:#fff;
+    padding-bottom: 30px;
+        .footer-element {
+            padding: 5px 0px;
+            font-size: fontsize(medium);
+            font-weight: weight(bold);
+            width: 90%;
+        }
+        .footer-element:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            }
+
+        .footer-icons {
+            width: 25px;
+            font-weight: 20px;
+            padding-right: 5px;
+        }
+}
+@media (width <=480px) {
+    .min-width_395 {
+        min-width: 395px;
     }
 }
 
