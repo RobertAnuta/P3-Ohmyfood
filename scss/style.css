@@ -75,14 +75,14 @@
 .header-location .icon {
   padding-right: 15px;
 }
-.header-location .header-location_span {
+.header-location_span {
   font-family: "Roboto", serif;
 }
 
 .header-text {
   background-color: #f7f7f7;
 }
-.header-text .header-text_ul {
+.header-text_ul {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -91,7 +91,7 @@
   padding: 0;
   list-style: none;
 }
-.header-text .header-text_ul > * {
+.header-text_ul > * {
   padding: 20px;
   margin: auto;
   text-align: center;
@@ -107,7 +107,7 @@
   text-align: center;
   padding: 30px 0px 30px 0px;
 }
-.nav-menu .nav-menu_title {
+.nav-menu_title {
   display: flex;
   justify-content: flex-start;
   padding: 30px 0px;

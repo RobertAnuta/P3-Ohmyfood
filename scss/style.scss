@@ -53,14 +53,14 @@
         .icon {
             padding-right: 15px;
         }
-        .header-location_span{
+        &_span{
             font-family: $font-text;
             font-size: fontsize(menium);                
         }
 }
 .header-text {
     background-color: $background-color_grey;
-        .header-text_ul {
+        &_ul {
             @include flexcenterwrap;
             @include reset-list;
                 > * {
@@ -77,7 +77,7 @@
     flex-direction: column;
     @include textcenter;
     padding: 30px 0px 30px 0px;
-    .nav-menu_title {
+    &_title {
         display: flex;
         justify-content: flex-start;
         padding: 30px 0px;
