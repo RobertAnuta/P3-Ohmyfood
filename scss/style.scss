@@ -340,12 +340,19 @@ footer {
     &_name {
         @include flexrow;
         justify-content: space-between;
-        padding: 20px;
         font-family: $font-title;
         font-weight: 900;
         font-size: 30px;
-        width: 90%;
+        width: 100%;
     }
+
+    &_menu {
+        width: 100%;
+    }
+}
+
+.restaurant-menu-card {
+    width: 100%;
 }
 
 .border-top_radious {
@@ -356,7 +363,7 @@ footer {
 }
 
 .icon_heart_padding {
-    padding-right: 20px;
+    padding-right: 30px;
     display: flex;
     align-items: center;
 
@@ -399,41 +406,93 @@ footer {
 
 .menu-element {
     @include flexwrap;
-    justify-content: space-between;
-    align-content: center;
-    align-items: flex-end;
+    place-content: center space-between;
+    flex-direction: row;
     background-color: $background-color_grey;
     box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.09);
-    padding: 20px;
-    margin: 10px;
-    border-radius: 20px;
-    height: 20px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    height: 60px;
+    min-width: 350px;
+    width: 100%;
+    cursor: pointer;
 
     &_text {
         @include flexcenterwrap;
         flex-direction: column;
+        padding: 10px;
+        width: auto;
     }
 
     &_name {
         font-weight: weight(bold);
+        padding: 2px;
+        object-fit: contain;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    &_description {
+        padding: 2px;
+        object-fit: contain;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     .menu-element_price {
         display: flex;
-        height: 100%;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding: 10px;
+        padding-right: 10px;
     }
+
+    i {
+        background: $tertiary-color;
+    }
+}
+
+.menu-element:hover {
+    .icon_hide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-element_description {
+        inline-size: 200px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+}
+
+.icon_tertiary-color {
+    color: #fff;
+    background-color: $tertiary-color;
+    transition: 0.5s;
+    width: 50px;
+    height: 100%;
+    border-radius: 0px 10px 10px 0px;
 }
 
 .btn-order {
     padding: 25px;
 
-    .btn-order_size {
-        height: auto;
+    &_size {
+        height: 30px;
         width: 150px;
         padding: 10px;
     }
+
 }
 
+.relative-40px {
+    position: relative;
+    top: -40px;
+}
 
 @media (width <=480px) {
     .min-width_395 {
