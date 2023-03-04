@@ -1,4 +1,6 @@
 # P3-Ohmyfood
 Ohmyfood
 
-My Web page: https://github.com/RobertAnuta
+My GitHub repository: https://github.com/RobertAnuta
+
+Oh my Food webpage repository: https://github.com/RobertAnuta/P3-Ohmyfood
