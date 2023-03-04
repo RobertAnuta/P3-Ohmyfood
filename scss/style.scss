@@ -1,6 +1,6 @@
 @import "./config";
 
-// Media query Mobile devices
+// Media query all Devices
 
 .font_logo {
     font-family: $font-text;
@@ -362,7 +362,7 @@ footer {
     }
 }
 
-#contact {
+.footer-element .footer-link {
     text-decoration: none;
     color: #fff;
 }
