@@ -14,6 +14,9 @@
     box-sizing: content-box;
 }
 
+$transition-delay: 0.2s;
+$transition-duration: 0.5s;
+$transition-timing: ease-out;
 $primary-color: #9356DC;
 $primary-color_opacity: #e9ddf8;
 $secondary-color: #FF79DA;
